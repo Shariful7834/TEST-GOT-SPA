@@ -1,14 +1,15 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
+import { AOS } from "aos";
+
+AOS.init();
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <h1>This is Home page</h1>
-      </div>
-    </>
+    <div className="max-w-[1440px] mx-auto">
+      <RouterProvider router={router} />
+     
+    </div>
   );
 }
 
