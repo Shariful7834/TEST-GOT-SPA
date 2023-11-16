@@ -5,13 +5,13 @@ const Navbar = () => {
   const menuItems = (
     <React.Fragment>
       <li className="font-semibold text-xl">
-        <Link to="/">Houses</Link>
+        <Link to="/houses">Houses</Link>
       </li>
       <li className="font-semibold text-xl">
-        <Link to="/appointment">Persons</Link>
+        <Link to="/persons">Persons</Link>
       </li>
       <li className="font-semibold text-xl">
-        <Link to="/">Quotes</Link>
+        <Link to="/quotes">Quotes</Link>
       </li>
     </React.Fragment>
   );
@@ -48,7 +48,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+          <ul className="menu menu-horizontal p-">{menuItems}</ul>
         </div>
         <label
           htmlFor="dashboard-drawer"
