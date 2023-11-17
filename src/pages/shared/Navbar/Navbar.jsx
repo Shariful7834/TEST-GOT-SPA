@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const menuItems = (
     <React.Fragment>
-      <li className="font-semibold text-xl">
+      <li className="font-semibold text-xl ml-3">
         <Link to="/houses">Houses</Link>
       </li>
-      <li className="font-semibold text-xl">
+      <li className="font-semibold text-xl ml-3">
         <Link to="/persons">Persons</Link>
       </li>
-      <li className="font-semibold text-xl">
+      <li className="font-semibold text-xl ml-3">
         <Link to="/quotes">Quotes</Link>
       </li>
     </React.Fragment>
