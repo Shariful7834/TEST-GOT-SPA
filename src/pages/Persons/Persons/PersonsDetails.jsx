@@ -20,14 +20,20 @@ const PersonsDetails = () => {
 
   return (
     <div>
-      <h1 className="text-3xl">Persons Details will be shown here</h1>
-      <h1>Name: {name}</h1>
-      <h1>House Name: {houseName}</h1>
+      <div className="card w-5/6 bg-base-100 mx-auto shadow-xl mt-8">
+        <div className="card-body">
+          <h1 className="card-title  text-3xl font-bold mx-auto">
+            Persons Details
+          </h1>
+          <h3 className="text-2xl font-semibold">Person Name: {name} </h3>
+          <h3 className="text-xl font-semibold">House Name: {name} </h3>
+
+          <h2 className="text-3xl font-bold">Displayed Quote</h2>
+          <div className="chat-bubble mx-auto">{displayedQuote}</div>
+        </div>
+      </div>
+
       <div>
-        <h2>Displayed Quote</h2>
-
-        <div className="chat-bubble mx-auto">{displayedQuote}</div>
-
         <button
           className="btn btn-outline btn-success mt-6"
           onClick={getRandomQuote}
@@ -41,13 +47,3 @@ const PersonsDetails = () => {
 };
 
 export default PersonsDetails;
-// {personData.quotes.map((quote) => (
-//   <div
-//     className="card bg-slate-200 w-90 mt-3 p-5 font-semibold text-black"
-//     key={quote.slug}
-//   >
-//     <h3>{quote}</h3>
-
-//     {/* Additional house details can be added here */}
-//   </div>
-// ))}
