@@ -1,9 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+// Functional component definition for displaying a list of persons
 const Persons = () => {
+  // State hook for managing the list of persons
   const [persons, setPersons] = useState([]);
 
+  // State hook for managing the search term entered by the user
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Filtering persons based on the search term
+  const filteredPersons = persons.filter((person) =>
+    person.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Fetching persons data from the external API when the component mounts
   useEffect(() => {
     const fetchPersons = async () => {
       try {
@@ -17,26 +28,56 @@ const Persons = () => {
       }
     };
 
+    // Calling the fetchPersons function
     fetchPersons();
   }, []);
 
+  // Rendering the Persons component
   return (
-    <div style={{ height: "800px" }}>
-      <h1 className="text-5xl">All Persons will be displayed here</h1>
+    <div style={{ height: "100%" }}>
+      <h1 className="text-5xl">All Persons will be shown here</h1>
 
-      <div>
-        <h2>Persons</h2>
-        {persons.map((person) => (
-          <Link key={person.slug} to={`/persons/${person.slug}`}>
-            <div className="list-item">
-              <h3>{person.name}</h3>
-              {person.house && <p>House: {person.house}</p>}
+      {/* Search input for filtering persons by name */}
+      <input
+        type="text"
+        placeholder="Search by person name..."
+        className="input input-bordered input-info w-full max-w-xs mt-6 text-2xl"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
+      {/* Grid layout for displaying persons or a message if no persons are found */}
+      <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-5 mt-5">
+        {filteredPersons.length > 0 ? (
+          // Mapping through filtered persons and displaying them as cards with links
+          filteredPersons.map((person) => (
+            <div
+              className="card bg-slate-700 p-5 font-semibold text-black"
+              key={person.slug}
+            >
+              {/* Link to the details page of each person */}
+              <Link to={`/persons/${person.slug}`}>
+                <h3 className="text-2xl text-white">{person.name}</h3>
+              </Link>
+              {/* Displaying the associated house if available */}
+              {person.house && (
+                <p className=" text-white">
+                  <span className="text-orange-600">Associated House:</span>{" "}
+                  {person.house.name}
+                </p>
+              )}
             </div>
-          </Link>
-        ))}
+          ))
+        ) : (
+          // Message displayed when no persons are found for the current search term
+          <p className="font-bold text-4xl">
+            No Persons found for the current search term.
+          </p>
+        )}
       </div>
     </div>
   );
 };
 
+// Exporting the Persons component as the default export
 export default Persons;

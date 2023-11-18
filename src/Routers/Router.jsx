@@ -5,6 +5,7 @@ import AllHouses from "../pages/Houses/Houses/AllHouses";
 import Persons from "../pages/Persons/Persons/Persons";
 import Quotes from "../pages/Quotes/Quotes/Quotes";
 import HouseMembers from "../pages/Houses/Houses/HouseMembers";
+import PersonsDetails from "../pages/Persons/Persons/PersonsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,15 @@ export const router = createBrowserRouter([
         path: "/houses/:slug",
         loader: ({ params }) =>
           fetch(`https://api.gameofthronesquotes.xyz/v1/house/${params.slug}`),
-          element:<HouseMembers></HouseMembers>
+        element: <HouseMembers></HouseMembers>,
+      },
+      {
+        path: "/persons/:slug",
+        loader: ({ params }) =>
+          fetch(
+            `https://api.gameofthronesquotes.xyz/v1/character/${params.slug}`
+          ),
+        element: <PersonsDetails></PersonsDetails>,
       },
     ],
   },
