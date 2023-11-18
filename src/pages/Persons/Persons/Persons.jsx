@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../../../hooks/useTitle";
 
-// Functional component definition for displaying a list of persons
 const Persons = () => {
-  // State hook for managing the list of persons
+  useTitle("Persons");
+
   const [persons, setPersons] = useState([]);
 
-  // State hook for managing the search term entered by the user
   const [searchTerm, setSearchTerm] = useState("");
 
   // Filtering persons based on the search term
@@ -34,7 +34,7 @@ const Persons = () => {
 
   // Rendering the Persons component
   return (
-    <div style={{ height: "100%" }}>
+    <div className="w-5/6 mx-auto text-center mt-10 h-fit">
       <h1 className="text-5xl">All Persons will be shown here</h1>
 
       {/* Search input for filtering persons by name */}
@@ -52,14 +52,14 @@ const Persons = () => {
           // Mapping through filtered persons and displaying them as cards with links
           filteredPersons.map((person) => (
             <div
-              className="card bg-slate-700 p-5 font-semibold text-black"
+              data-aos="zoom-in-up"
+              className="card bg-accent p-5 font-semibold text-black"
               key={person.slug}
             >
-              {/* Link to the details page of each person */}
               <Link to={`/persons/${person.slug}`}>
                 <h3 className="text-2xl text-white">{person.name}</h3>
               </Link>
-              {/* Displaying the associated house if available */}
+
               {person.house && (
                 <p className=" text-white">
                   <span className="text-orange-600">Associated House:</span>{" "}

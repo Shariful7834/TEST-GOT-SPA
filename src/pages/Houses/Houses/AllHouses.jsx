@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../../../hooks/useTitle";
 
 const AllHouses = () => {
+  useTitle("Houses");
   const [houses, setHouses] = useState([]);
-  
-  console.log(houses);
+
+  // console.log(houses);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredHouses = houses.filter((house) =>
@@ -27,21 +29,27 @@ const AllHouses = () => {
     fetchHouses();
   }, []);
   return (
-    <div style={{ height: "800px" }}>
+    <div
+      className="w-5/6 mx-auto text-center mt-10"
+      style={{ height: "800px" }}
+    >
       <h1 className="text-5xl">All Houses will be shown here</h1>
       {/* Searchable features implemented here  */}
-      <input
-        type="text"
-        placeholder="Search houses..."
-        className="input input-bordered input-info w-full max-w-xs mt-6 text-2xl"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      <div>
+        <input
+          type="text"
+          placeholder="Search houses..."
+          className="input input-bordered input-info w-full max-w-xs mt-6 text-2xl"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
       <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-5 mt-5">
         {filteredHouses.length > 0 ? (
           filteredHouses.map((house) => (
             <div
-              className="card bg-slate-200 p-5 font-semibold text-black"
+              data-aos="zoom-in"
+              className="text-white text-2xl  card p-8 card-side shadow-xl bg-gradient-to-r from-primary to-secondary"
               key={house.slug}
             >
               <Link to={`/houses/${house.slug}`}>

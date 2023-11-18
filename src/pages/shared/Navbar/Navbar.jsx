@@ -16,8 +16,8 @@ const Navbar = () => {
     </React.Fragment>
   );
   return (
-    <div className="w-full bg-slate-100">
-      <div className="navbar py-5 max-w-[1440px] mx-auto flex justify-between ">
+    <div className="mx-auto bg-slate-300">
+      <div className="navbar w-5/6 py-5  mx-auto flex justify-between ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
