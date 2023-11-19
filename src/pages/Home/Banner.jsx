@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className="hero object-cover bg-gray-900">
       <video
-        className="object-cover w-full h-full mix-blend-plus-lighter"
+        className="object-cover w-full h-full mix-blend-plus-lighter blur-xl"
         autoPlay
         muted
         loop

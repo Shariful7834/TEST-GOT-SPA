@@ -1,8 +1,4 @@
-/**
- * Renders the list of house members.
- * @returns {JSX.Element} The rendered HouseMembers component.
- */
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../../../hooks/useTitle";
 const HouseMembers = () => {
   useTitle("Members");
@@ -28,7 +24,9 @@ const HouseMembers = () => {
             className="text-white text-2xl  card p-8 card-side shadow-xl bg-accent"
             key={member.slug}
           >
-            <h3>{member.name}</h3>
+            <Link to={`/members/${member.slug}`}>
+              <h3 className="text-2xl text-white">{member.name}</h3>
+            </Link>
 
             {/* Additional house details can be added here */}
           </div>

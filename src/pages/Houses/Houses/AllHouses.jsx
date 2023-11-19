@@ -58,9 +58,7 @@ const AllHouses = () => {
             </div>
           ))
         ) : (
-          <p className="font-bold text-4xl">
-            No houses found for the current search term.
-          </p>
+          <p className="font-bold text-right text-4xl">No houses found.</p>
         )}
       </div>
     </div>
