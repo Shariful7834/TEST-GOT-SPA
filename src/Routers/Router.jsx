@@ -1,18 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 
-import AllHouses from "../pages/Houses/Houses/AllHouses";
-import Persons from "../pages/Persons/Persons/Persons";
+import AllHouses from "../pages/Houses/AllHouses";
+import Persons from "../pages/Persons/Persons";
 
-import HouseMembers from "../pages/Houses/Houses/HouseMembers";
-import PersonsDetails from "../pages/Persons/Persons/PersonsDetails";
+import HouseMembers from "../pages/Houses/HouseMembers";
+import PersonsDetails from "../pages/Persons/PersonsDetails";
 import Home from "../pages/Home/Home";
 import Quotes from "../pages/Quotes/Quotes";
+import ErrorPage from "../pages/shared/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage>No Data Available</ErrorPage>,
     children: [
       {
         path: "/",
@@ -53,7 +55,6 @@ export const router = createBrowserRouter([
           ),
         element: <PersonsDetails></PersonsDetails>,
       },
-  
     ],
   },
 ]);

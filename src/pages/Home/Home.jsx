@@ -4,7 +4,7 @@ import Testimonial from "./Testimonial";
 import Thrones from "./Thrones";
 
 const Home = () => {
-  useTitle("Home");
+  useTitle("Home-Game of Thrones");
   return (
     <div>
       <Banner></Banner>

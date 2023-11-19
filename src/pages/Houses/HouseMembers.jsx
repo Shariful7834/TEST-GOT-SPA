@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
-import useTitle from "../../../hooks/useTitle";
+import useTitle from "../../hooks/useTitle";
+
 const HouseMembers = () => {
   useTitle("Members");
 
@@ -16,19 +17,19 @@ const HouseMembers = () => {
       style={{ height: "1280px" }}
     >
       <h1 className="text-3xl">House Members</h1>
-      <div className="grid gap-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 p-5 mt-5">
-        {/* Iterate over each member and render their details */}
+      <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-5 mt-5">
+       
         {members.map((member) => (
           <div
             data-aos="flip-left"
-            className="text-white text-2xl  card p-8 card-side shadow-xl bg-accent"
+            className="text-white text-2xl  card p-8 card-side shadow-xl bg-gradient-to-r from-primary to-secondary"
             key={member.slug}
           >
             <Link to={`/members/${member.slug}`}>
               <h3 className="text-2xl text-white">{member.name}</h3>
             </Link>
 
-            {/* Additional house details can be added here */}
+         
           </div>
         ))}
       </div>

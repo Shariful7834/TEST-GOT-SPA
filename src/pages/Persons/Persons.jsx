@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import useTitle from "../../../hooks/useTitle";
+import useTitle from "../../hooks/useTitle";
 
 const Persons = () => {
   useTitle("Persons");
@@ -56,7 +56,7 @@ const Persons = () => {
           filteredPersons.map((person) => (
             <div
               data-aos="zoom-in-up"
-              className="card bg-accent p-5 font-semibold text-black"
+              className="card bg-gradient-to-r from-primary to-secondary p-5 font-semibold text-black"
               key={person.slug}
             >
               <Link to={`/persons/${person.slug}`}>
@@ -65,14 +65,13 @@ const Persons = () => {
 
               {person.house && (
                 <p className=" text-white">
-                  <span className="text-orange-600">Associated House:</span>{" "}
+                  <span className="text-black">Associated House:</span>{" "}
                   {person.house.name}
                 </p>
               )}
             </div>
           ))
         ) : (
-          // Message displayed when no persons are found for the current search term
           <>
             <p className="font-bold text-4xl text-right ">No Persons found</p>
           </>
@@ -82,5 +81,4 @@ const Persons = () => {
   );
 };
 
-// Exporting the Persons component as the default export
 export default Persons;

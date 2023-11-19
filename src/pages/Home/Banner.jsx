@@ -18,7 +18,11 @@ const Banner = () => {
             <span className="font-semibold text-white blur-none">
               {/* Style will be inherited from the parent element */}
               <Typewriter
-                words={["GAME OF THRONES  ", "LONG STORY SHORT"]}
+                words={[
+                  "GAME OF THRONES  ",
+                  "LONG STORY SHORT",
+                  "LOVE IS THE DEATH OF DUTY",
+                ]}
                 loop={0}
                 cursor
                 cursorStyle=""
