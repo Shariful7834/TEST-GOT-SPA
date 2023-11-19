@@ -6,7 +6,7 @@ import Aos from "aos";
 Aos.init();
 function App() {
   return (
-    <div className="bg-slate-100">
+    <div className="bg-gray-200">
       <RouterProvider router={router} />
     </div>
   );

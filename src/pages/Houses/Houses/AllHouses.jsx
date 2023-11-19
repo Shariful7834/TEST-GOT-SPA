@@ -30,10 +30,10 @@ const AllHouses = () => {
   }, []);
   return (
     <div
-      className="w-5/6 mx-auto text-center mt-10"
+      className="w-4/6 mx-auto text-center mt-10 "
       style={{ height: "800px" }}
     >
-      <h1 className="text-5xl">All Houses will be shown here</h1>
+      <h1 className="text-3xl">All Houses of GOT</h1>
       {/* Searchable features implemented here  */}
       <div>
         <input

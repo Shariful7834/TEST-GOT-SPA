@@ -15,7 +15,10 @@ const HouseMembers = () => {
   const [{ members }] = houseDetails;
 
   return (
-    <div className="w-5/6 mx-auto text-center mt-10">
+    <div
+      className="w-5/6 mx-auto text-center mt-10"
+      style={{ height: "1280px" }}
+    >
       <h1 className="text-3xl">House Members</h1>
       <div className="grid gap-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 p-5 mt-5">
         {/* Iterate over each member and render their details */}

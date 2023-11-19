@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="bg-neutral ">
+    <div className="bg-neutral absolute inset-x-0 ">
       <footer className="footer p-10  m-auto mt-10 w-[1440px] text-white">
         <div>
           <span className="footer-title">Services</span>

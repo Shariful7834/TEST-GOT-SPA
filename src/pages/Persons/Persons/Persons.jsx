@@ -34,8 +34,11 @@ const Persons = () => {
 
   // Rendering the Persons component
   return (
-    <div className="w-5/6 mx-auto text-center mt-10 h-fit">
-      <h1 className="text-5xl">All Persons will be shown here</h1>
+    <div
+      className="w-4/6 mx-auto text-center mt-10"
+      style={{ height: "1280px" }}
+    >
+      <h1 className="text-3xl">All Persons of GOT</h1>
 
       {/* Search input for filtering persons by name */}
       <input
@@ -70,9 +73,9 @@ const Persons = () => {
           ))
         ) : (
           // Message displayed when no persons are found for the current search term
-          <p className="font-bold text-4xl">
-            No Persons found for the current search term.
-          </p>
+          <>
+            <p className="font-bold text-4xl text-right ">No Persons found</p>
+          </>
         )}
       </div>
     </div>

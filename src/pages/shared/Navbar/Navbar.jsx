@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import got from "../../../assets/got.png";
 
 const Navbar = () => {
   const menuItems = (
@@ -17,7 +18,7 @@ const Navbar = () => {
   );
   return (
     <div className="mx-auto bg-slate-300">
-      <div className="navbar w-5/6 py-5  mx-auto flex justify-between ">
+      <div className="navbar w-4/6 p-0  mx-auto flex justify-between ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -43,8 +44,11 @@ const Navbar = () => {
               {menuItems}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-2xl font-bold	">
-            Game of Thrones
+          <Link
+            to="/"
+            className="w-1/2 h-24 btn btn-ghost normal-case  font-bold	"
+          >
+            <img className="w-1/2 h-26" src={got} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

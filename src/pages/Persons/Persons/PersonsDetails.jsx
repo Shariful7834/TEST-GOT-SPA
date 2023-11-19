@@ -46,7 +46,7 @@ const PersonsDetails = () => {
   };
 
   return (
-    <div className="w-5/6 mx-auto text-center" style={{ height: "1550px" }}>
+    <div className="w-4/6 mx-auto text-left p-10" style={{ height: "1550px" }}>
       <div className="card w-5/6 bg-base-100 mx-auto shadow-xl mt-8">
         <div className="card-body">
           <h1 className="card-title text-3xl font-bold mx-auto">
@@ -57,7 +57,7 @@ const PersonsDetails = () => {
             <span className="mr-3">House Name:</span>
             {houseName}
           </h3>
-          <h2 className="text-3xl font-bold my-3">Displayed Quote</h2>
+          <h2 className="text-2xl font-bold my-3">Displayed Quote</h2>
           <ul data-aos="fade-right">
             {displayedQuotes.map((quote, index) => (
               <li className="chat-bubble mx-start mt-1" key={index}>
@@ -68,12 +68,12 @@ const PersonsDetails = () => {
         </div>
       </div>
 
-      <div>
+      <div className="text-center">
         <button
           className="btn btn-primary bg-gradient-to-r from-primary to-secondary mt-6"
           onClick={handleRandomQuotesClick}
         >
-          Show Random Quote
+          Show Other Quote
         </button>
       </div>
     </div>
