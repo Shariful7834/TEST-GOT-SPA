@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom"; // Import Link and useParams
 import useTitle from "../../hooks/useTitle";
 
 const PersonsDetails = () => {
   useTitle("Person Details");
+  // const { slug } = useParams(); // Use useParams to get the slug from the URL
   const personData = useLoaderData();
   const [{ name, house }] = personData;
   const houseName = house ? (
-    house.name
+    // Wrap the house name in Link component to navigate to the house page
+    <Link to={`/houses/${house.slug}`} className="hover:underline">
+      {house.name}
+    </Link>
   ) : (
-    <span className="text-red-600 ml-2">No House Found</span>
+    <span className="text-red-600 ml-2">Homeless</span>
   );
 
   const [displayedQuotes, setDisplayedQuotes] = useState([]);
