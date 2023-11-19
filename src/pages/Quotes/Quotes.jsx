@@ -24,7 +24,7 @@ const Quotes = () => {
             Disply Default Quotes
           </h1>
 
-          <ul>
+          <ul data-aos="fade-left">
             {quoteData.map((quote, index) => (
               <li key={index} className="chat-bubble mx-start mt-3">
                 <span className="font-semibold">{index + 1}</span> -{" "}
