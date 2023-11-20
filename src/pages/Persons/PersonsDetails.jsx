@@ -50,7 +50,7 @@ const PersonsDetails = () => {
   };
 
   return (
-    <div className="w-4/6 mx-auto text-left p-10" style={{ height: "2050px" }}>
+    <div className="w-4/6 mx-auto text-left p-10" style={{ height: "2220px" }}>
       <div className="card w-5/6 bg-base-100 mx-auto shadow-xl mt-8">
         <div className="card-body">
           <h1 className="card-title text-3xl font-bold mx-auto">

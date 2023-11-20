@@ -54,7 +54,7 @@ const Testimonial = () => {
           <div key={review.id}>
             <div
               data-aos="zoom-in-up"
-              className="card w-96 bg-base-100 shadow-xl mr-5 "
+              className="card w-96 bg-base-100 shadow-xl mr-5 mb-5"
             >
               <div className="card-body">
                 <p>{review.description}</p>
