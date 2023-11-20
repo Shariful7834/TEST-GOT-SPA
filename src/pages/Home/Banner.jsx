@@ -3,7 +3,7 @@ import video from "../../assets/video.mp4";
 
 const Banner = () => {
   return (
-    <div className="hero object-cover bg-gray-900">
+    <div className="hero object-cover bg-gray-900  hidden md:block lg:block">
       <video
         className="object-cover w-full h-full mix-blend-plus-lighter"
         autoPlay
