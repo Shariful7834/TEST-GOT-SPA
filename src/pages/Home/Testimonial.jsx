@@ -49,12 +49,12 @@ const Testimonial = () => {
         </div>
         <img className=" lg:w-36 w-24" src={quote} alt="" />
       </div>
-      <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ">
+      <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
         {testimonialData.map((review) => (
           <div key={review.id}>
             <div
               data-aos="zoom-in-up"
-              className="card w-96 bg-base-100 shadow-xl mr-5 mb-5"
+              className="card w-96 bg-base-100 shadow-xl mr-5 "
             >
               <div className="card-body">
                 <p>{review.description}</p>
