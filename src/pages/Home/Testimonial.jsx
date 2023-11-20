@@ -39,7 +39,7 @@ const Testimonial = () => {
     },
   ];
   return (
-    <div className="w-4/6 mx-auto text-center mt-20 my-40">
+    <div className="w-4/5 mx-auto text-center mt-20 my-40">
       <div className="flex justify-between">
         <div>
           <h4 className="text-2xl text-primary font-semibold text-left">
@@ -49,12 +49,12 @@ const Testimonial = () => {
         </div>
         <img className=" lg:w-36 w-24" src={quote} alt="" />
       </div>
-      <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+      <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ">
         {testimonialData.map((review) => (
           <div key={review.id}>
             <div
               data-aos="zoom-in-up"
-              className="card w-96 bg-base-100 shadow-xl"
+              className="card w-96 bg-base-100 shadow-xl mr-5 "
             >
               <div className="card-body">
                 <p>{review.description}</p>
