@@ -16,7 +16,6 @@ const Banner = () => {
         <div className="provide">
           <h3 className="text-8xl">
             <span className="font-semibold text-white blur-none">
-              {/* Style will be inherited from the parent element */}
               <Typewriter
                 words={[
                   "GAME OF THRONES  ",

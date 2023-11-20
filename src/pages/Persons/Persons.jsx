@@ -28,11 +28,11 @@ const Persons = () => {
       }
     };
 
-    // Calling the fetchPersons function
+
     fetchPersons();
   }, []);
 
-  // Rendering the Persons component
+
   return (
     <div
       className="w-4/6 mx-auto text-center mt-10"
@@ -49,7 +49,7 @@ const Persons = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
 
-      {/* Grid layout for displaying persons or a message if no persons are found */}
+      
       <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-5 mt-5">
         {filteredPersons.length > 0 ? (
           // Mapping through filtered persons and displaying them as cards with links
