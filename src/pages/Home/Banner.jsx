@@ -21,6 +21,7 @@ const Banner = () => {
                   "GAME OF THRONES  ",
                   "LONG STORY SHORT",
                   "LOVE IS THE DEATH OF DUTY",
+                  'Sometimes duy is the death of love."',
                 ]}
                 loop={0}
                 cursor
