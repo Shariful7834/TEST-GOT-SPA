@@ -76,7 +76,7 @@ const PersonsDetails = () => {
 
       <div className="text-center">
         <button
-          className="btn btn-primary bg-gradient-to-r from-primary to-secondary mt-6"
+          className="btn btn-primary bg-gradient-to-r from-primary to-secondary mt-10"
           onClick={handleRandomQuotesClick}
         >
           Show Other Quote
