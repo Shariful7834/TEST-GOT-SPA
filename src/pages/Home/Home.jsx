@@ -7,6 +7,7 @@ const Home = () => {
   useTitle("Home-Game of Thrones");
   return (
     <div>
+    
       <Banner></Banner>
       <Thrones></Thrones>
       <Testimonial></Testimonial>

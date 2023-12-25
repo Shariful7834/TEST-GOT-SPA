@@ -33,8 +33,7 @@ const Thrones = () => {
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsumis that it has a more-or-less normal
               distribution of letters,as opposed to using Content here, content
-              making it look like readable English. Many desktop publishing
-              packages and web page
+              making it look like readable English. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, aperiam?
             </p>
             <Link
               to="/quotes"
