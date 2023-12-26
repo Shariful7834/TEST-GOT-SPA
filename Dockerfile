@@ -30,6 +30,7 @@ COPY package*.json ./
 COPY vite.config.js ./
 RUN npm install
 EXPOSE 5173
+# Run the app when the container launches
 
 CMD ["npm", "run", "preview"]
 
